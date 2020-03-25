@@ -55,5 +55,84 @@ function isPasswordValid(password){
 }
 
 // Esta es la ejecucion de la funcion
-const result = isPasswordValid('mipassword');
-console.log(result);
+const resultado = isPasswordValid('mipassword');
+console.log(resultado);
+
+// IF
+// Escriba un programa que pida dos números enteros y que calcule su división, escribiendo si la división es exacta o no.
+const exacta = (num1,num2) => {
+  if (num1%num2 === 0){
+    return 'Es exacta';
+  }
+  return 'No es exacta';
+}
+
+// Escriba un programa que pida dos números y que conteste cuál es el menor y cuál el mayor o que escriba que son iguales.
+const iguales = (num1,num2) => {
+  if (num1 === num2){
+    return 'Son iguales';
+  } else if (num1 > num2){
+    return 'Numero 1 > numero 2';
+  } else if (num1 < num2){
+    return 'Numero 1 > numero 2';
+  }
+}
+
+// Escriba un programa que pida el año actual y un año cualquiera y que escriba cuántos años han pasado desde ese año o cuántos años faltan para llegar a ese año.
+const fechas = (hoy,otro) => {
+  let dif  = hoy - otro;
+  if (dif > 0){
+    return 'son ' + dif + ' al futuro';
+  } else if (dif < 0){
+    return 'son ' + dif + ' al pasado';
+  } else {
+    return 'estamos en el mismo año';
+  }
+} 
+
+// Escriba un programa que pida tres números y que escriba si son los tres iguales, si hay dos iguales o si son los tres distintos.
+const tresnum = (a,b,c) => {
+  if (a === b && a === c) {
+    return 'todos son iguales';
+  } else if ((a === b && a !== c) || (a === b && b !== c) || (a === c && b !== c) || (b === c && a !== c)) {
+    return 'dos son iguales';
+  }
+  return 'todos son diferentes'
+}
+
+// Pedir tres números y obtener el mayor de ellos.
+const ordenar = (a,b,c) => {
+  result = []
+  if ( a > b  && a > c) {
+    result.push(a);
+    if (b > c){
+      result.push(b,c);
+    }else {
+      result.push(c,b);
+    }
+  } else if ( b > a  && b > c) {
+      result.push(b);
+    if (a > c){
+      result.push(a,c);
+    }else {
+      result.push(c,a);
+    }
+  } else if ( c > a  && c > b) {
+    result.push(c);
+    if (a > b){
+      result.push(a,b);
+    }else {
+      result.push(b,a);
+    }
+  }
+
+  return console.log(result[0]+'>'+result[1]+'>'+result[2]);
+}
+
+console.log(ordenar(1,2,3));
+
+// FOR
+// Imprimir del 1 al 10000
+// Imprimir los números pares del 1 al 10000
+// Crea la suma de todos los números pares del 1 al 3000
+// Crea una serie Fibonacci hasta el 10000
