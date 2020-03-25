@@ -35,4 +35,6 @@ const snoopy = {
 
 }
 
+console.log(ayudanteDeSanta.comer('carne'));
+
 
