@@ -61,3 +61,5 @@ const myPinguin = {
 }
 
 console.log("Hola, soy un pingüino y mi nombre es " + myPinguin.character + " y hago " + myPinguin.graznar());
+
+
