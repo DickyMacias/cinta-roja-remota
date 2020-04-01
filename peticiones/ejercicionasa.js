@@ -15,10 +15,13 @@ request.get(URL, (error,response,body) => {
   const json = JSON.parse(body);
   const json2 = Object.entries(json.near_earth_objects);
 
+  console.log('Estos asteroides se acercaron peligrosamente a la tierra:');
+  let indice = 0;
   json2.forEach(element => { 
     json.near_earth_objects[element[0]].forEach(element => { 
       if (element.is_potentially_hazardous_asteroid === true) {
-        console.log(element.name);
+        indice = indice + 1;
+        console.log(indice+'.- '+element.name);
       };
     });
   });
