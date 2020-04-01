@@ -10,7 +10,7 @@ const request = require('request');
 
 const getName = name => 'https://pokeapi.co/api/v2/pokemon/'+name;
 
-URL = getName('ditto');
+URL = getName('charizard');
 request.get(URL, (error,response,body) => {
   const json = JSON.parse(body);
   //console.log(json.films[0]);
